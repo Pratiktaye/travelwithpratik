@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel with Pratik</title>
+    <link rel="shortcut icon" href="./Image/Logo.png" type="Image/x-icon">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/book.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@icon/bootstrap-icons@1.3.0-alpha.0/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./Image/Logo.png" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./Main1.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./aboutus.html">ABOUTUS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./contactus.html">CONTACTUS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              PRODUCTS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./oneday.html">One Day Tour Package</a></li>
+              <li><a class="dropdown-item" href="./maharashta.html">Maharashtra Bhraman Tour Package</a></li>
+              <li><a class="dropdown-item" href="./bharat.html">Bharat Bhraman Tour Package</a></li>
+              <li><a class="dropdown-item" href="./city.html">City Tour Package</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./services.html" tabindex="-1" aria-disabled="true">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./Login.html">LOGIN</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>x
+        </form>
+      </div>
+    </div>
+  </nav>
+ 
+
+  <div class="container mt-5">
+    <h2 class="text-center">Book Your Tour Now</h2>
+    <form id="tourForm">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Select Date</label>
+            <input type="date" class="form-control" id="date" required>
+        </div>
+        <div class="form-group">
+            <label for="day">Select Day</label>
+            <select class="form-control" id="day" required>
+                <option value="">Choose a day</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+                <option value="sunday">Sunday</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="country">Select Tour Package</label>
+            <select class="form-control" id="country" required>
+                <option value="">Choose a package</option>
+                <option value="US">One Day Tour Package</option>
+                <option value="usa">City Tour Package</option>
+                <option value="canada">Maharashtra Bhraman Tour Package</option>
+                <option value="uk">Bharat Bhraman Tour Package</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="state">Select Plan</label>
+            <select class="form-control" id="state" required>
+                <option value="">Choose Package</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="message">Additional Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Any additional information"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmationModal">Book Now</button>
+    </form>
+</div>
+
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmationModalLabel">Booking Confirmation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Your tour has been successfully booked! We will contact you shortly.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+const states = {
+    usa: ['Pune', 'Mumbai', 'Kolkata', 'Delhi', 'Indore'],
+    canada: ['Ashtavinaya Darshan', 'Kokan Darshan', 'Shaktipith Darshan'],
+    uk: ['12 Jotirlinga', 'Jammu And Kashmir Trip'],
+    US: ['Mahabaleshwar', 'Lonavla', 'Matheran', 'Shivneri Fort', 'Rajgad Fort', 'Janjira Fort']
+};
+
+document.getElementById('country').addEventListener('change', function() {
+    const country = this.value;
+    const stateDropdown = document.getElementById('state');
+    
+    stateDropdown.innerHTML = '<option value="">Choose a state/region</option>';
+    
+    if (country && states[country]) {
+        states[country].forEach(state => {
+            const option = document.createElement('option');
+            option.value = state.toLowerCase();
+            option.textContent = state;
+            stateDropdown.appendChild(option);
+        });
+    }
+});
+</script>
+  <section class="footer">
+    <div class="container">
+      <div class="row py-3 text-center">
+        <div class="col-xl-3 col-md-4 col-sm-6 col-xs-1">
+ 
+        </div>
+        <div class="col-xl-4 col-md-4 col-sm-6 col-xs-1">
+          <h4>PRODUCTS & SERVICES</h4>
+          <p>
+            For More Details <a href="./contactus.html">Contact Us</a>
+          </p>
+                    <p align="center">&copy; 2024 Travel with Pratik. All rights reserved.</p>
+                    
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
